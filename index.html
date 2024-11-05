@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensor Data</title>
+</head>
+<body>
+    <h1>Received Sensor Data</h1>
+    <table border="1">
+        <tr>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>Illuminance (Lux)</th>
+            <th>ActivePower (kWh)</th>
+        </tr>
+        {% for data in sensor_data %}
+        <tr>
+            <td>{{ data['temperature'] }}</td>
+            <td>{{ data['humidity'] }}</td>
+            <td>{{ data['illuminance'] }}</td>
+            <td>{{ data['activepower'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
